@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - UTS Web</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <i
+        class="fas fa-home mobile-bar"
+        onclick="location.href='./dashboard.html'"
+      ></i>
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAqElEQVR4nO2WwQkDMQwEtyVLKiKX/itICkk4QyAP+3A4nBNmBvTzCubjlQQAP+HudzN7uvvraPY3EbFlyDYZWfa19JEh22R02WcyZJsgIkQqiPRARIjMEbFVCjEitv3hyLJSyi1DFuCfOGe8cv1aflEXnMk2QUSIVBDpgYgQmSNiqxRicMYDHMIZr2S/ll/UBWeyTRARIhVEeiAiROaI2CqFGJzxAEvyBjNP73b4ZeAUAAAAAElFTkSuQmCC"
+        alt="squared-menu"
+        class="img-icon-sidebar"
+        onclick="location.href='./products.html'"
+      />
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6klEQVR4nN1Vv0scURBekUQjSZvawIK66t2973t3HBfkylRW4SrBUtJIIIW9jdgk3OmZ+xNSpEkTG01IHUKaaCFiYdKKhQaCP46T0TlY3r0Nu2d3Aw/ezs6bb/b7Zt4GwcAayVmSDQB7JP/K0n3dWjvTd+IwDEdIvifZJtmRBeA3gM+x52uSzSiKHvaT/Gs3USzhNoAXrp/kl0wgAFqe5Ju5XO6pgANYAnDlvs/CedutMAiCoVKp9AxAWYtYdwCui8XidBqAuoeCVX23BeBA9tbaiucr36UB2PccbGnSlyQvARwB+OOJ+yVx1Wp1NFETAGeeLzjN5/PjCmIAfPfECMCZFjkmrZ0FoAPghOSrWq02LNUB+JYEUKlUnogmxpipVBSp74ccAvBB4owx80kUWWsn1FdPK/LzGPixJikmiQxgQZ/3egBk/HVC44fX9CABzCnYG7dNC4VCpHEf1X+e1ElNB+ACwGvhtlwuPyK5COCfE3MrqjEmlE6La9JjIiLJXQ8FGySXPf4dkg+0+k+uJokgMv4OXYcAfjqXXaObnORK5sGT8ZdAqUY4lSV7AG+7nMeSt32a3MuMMWGcFleTrFf4WBRFj0lOSitqt1z+T5PUFt0J3/C0cCdJk77MGDMlw6iayC/Uq8ng2Q1L+n+HtHC+LgAAAABJRU5ErkJggg=="
+        alt="coins"
+        class="img-icon-sidebar"
+      />
+      <i class="fas fa-chart-line"></i>
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABSUlEQVR4nOWVz0rDQBCHo2f/oL5FJJDMt0ljnkBvhVKP6hP0Zdpercc+Um8FRfABWm+1MpBCSHfXBCMoDsxpZ77fMLOzGwT/wowxN8AK2Ja+SpLkujMB4KkC3/msE3iappfA0iKwjOM4bMs7BCbAXERugSnwYYHvXM+mZexcc5XhpIvIgwe2bej3VngYhkfA63cFROQty7KTPQFg5El6NsYMiqI4Vgf6IrLwCI32BJIkuQLWNnie5+f1+CiKzvTMAl8ry9omoCci79UEY8zANTNgWCtGc3vOIZdJ1YXaaktcsdrrWvUrL7ytAHDaSsDWIqDvii/vf7MWeYa80IHW49M0vRCRl8ZD/uqaAkPtubpW7oC7r+mPL5qarnkHT8Vd4LGD2mM3ATYe2EZExuU+aM5YGUEbi+M47PK5thowswg8Bn/mywx+s30Cvzxzt7PbVtkAAAAASUVORK5CYII="
+        alt="settings"
+        class="img-icon-sidebar"
+      />
+
+      <div class="footer" onclick="location.href='index.html'">
+        <i class="fas fa-sign-out-alt"></i>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <i class="fas fa-bars"></i>
+      <h1 class="title-dashboard">Dashboard</h1>
+
+      <!-- CARDS -->
+      <div class="cards">
+        <div class="card">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABN0lEQVR4nO3WMUrEQBQG4AeKViueQbDJAZL/HwNT2OQCOYGt/Taytl7Ba9htrZXgQWzsxSISVjEsxuxkRvMk74e/euzM+7IpImKxWKJTluUJgEeSTWg/zxjzW5JPRVGcxgtEBMAZgOeRi8RCGgAvJM9jERckX8cukQLCDeYNwGUwoK7rPQA3MZenhPALdOu9398J4ZxbkLxLcXFqCDeYtff+OPjfsUwdJnoFfrtiEOqqGITzg1xlWXbQd347A7BSD3HOLYbuyPP8SD0EwKqqqsO+89sZgGv1EP5RxSDUVTEIdVUMQl0Vg1BXxSDUVTEI0/bjw3EZOqMmSLto577lrjNqgnQX3V4YP8zUQbYXCZ3RIDRIMwsIEz2I3ky+wDcxCP9BxSDUVZkT5GHqJTnc+0GIxWKRbt4BYQwcszE99fMAAAAASUVORK5CYII="
+            alt="product"
+            class="img-icon-card"
+          />
+          <h3>Total Products</h3>
+          <div class="value" id="totalProducts">0</div>
+        </div>
+
+        <div class="card">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABN0lEQVR4nO3WMUrEQBQG4AeKViueQbDJAZL/HwNT2OQCOYGt/Taytl7Ba9htrZXgQWzsxSISVjEsxuxkRvMk74e/euzM+7IpImKxWKJTluUJgEeSTWg/zxjzW5JPRVGcxgtEBMAZgOeRi8RCGgAvJM9jERckX8cukQLCDeYNwGUwoK7rPQA3MZenhPALdOu9398J4ZxbkLxLcXFqCDeYtff+OPjfsUwdJnoFfrtiEOqqGITzg1xlWXbQd347A7BSD3HOLYbuyPP8SD0EwKqqqsO+89sZgGv1EP5RxSDUVTEIdVUMQl0Vg1BXxSDUVTEI0/bjw3EZOqMmSLto577lrjNqgnQX3V4YP8zUQbYXCZ3RIDRIMwsIEz2I3ky+wDcxCP9BxSDUVZkT5GHqJTnc+0GIxWKRbt4BYQwcszE99fMAAAAASUVORK5CYII="
+            alt="product"
+            class="img-icon-card"
+          />
+          <h3>Total Sales</h3>
+          <div class="value" id="totalSales">0</div>
+        </div>
+
+        <div class="card">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB50lEQVR4nN2Vv2tUQRDHT0Sjoq21QkBzxkIevv189yGv9DVWcpVgKTYiWNjbiI1yp9H8CRY2Ntr4A2sRmySFiIXaikUUxJhwMnEOjnWfvMQuAwP7dmfnO/v9ztz1ejvWgJPACFiW9N3c1sBQ0vy2EzdNMyPpgaQNSWP3T8CTyTewDiz0+/29W04OvJxKPHZ/Kulsug+82BKIpMVM8nuSDvvLLgG/0vPOnCe0bFbY6/V2lWV5tKoqPO5WErNeVdWJLgDDTPU3/Oy+pHf+ypiJu9OFnpXMxUU7izGel7QGfJD0OaPFksXVdb2vVRNgNXPxawjhiBdwCnidKcLiVi2mKIoD1tqdAdy/AJcHg8Fuq07SqzaAGOMh0ySEMNeVohVJb7zvH3oh59ooijEe8+9hJ5GBagIOfPT16TaRgQt+bzn3gnmrNLl4085CCEWM8Yyvr6VtWpZl3wEe+d63Nh0WEoCfkq46t/uBi8CPBGBTVGDWOm1ak7/MRASeZyi4C1zJ7D8rimKPAzxONWkFsfFP6HoPvE1+7EZTya9vefBs/C3QqjFO3Zck3Z5wPpV8I6fJfxkwO01Lqklna5pmxia0ruuDko5bK3q3rP1Lk87W/yP8KNPC4zZNtmUhhDkbRtfB/j6zmuw8+w3OFJP9nrWV3gAAAABJRU5ErkJggg=="
+            alt="coins"
+            class="img-icon-card"
+          />
+          <h3>Total Revenue</h3>
+          <div class="value" id="totalRevenue">0</div>
+        </div>
+      </div>
+
+      <a href="products.html" class="btn btn-data">Lihat Data Produk</a>
+
+      <div class="charts-row">
+        <div class="chart-container">
+          <h2 class="title-grafik">Grafik Produk Terjual</h2>
+          <canvas id="salesTableChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <h2 class="title-grafik">Grafik Pendapatan</h2>
+          <canvas id="revenueChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

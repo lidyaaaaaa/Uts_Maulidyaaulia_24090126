@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Produk - UTS Web</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <i
+        class="fas fa-home mobile-bar"
+        onclick='location.href="./dashboard.html"'
+      ></i>
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAqElEQVR4nO2WwQkDMQwEtyVLKiKX/itICkk4QyAP+3A4nBNmBvTzCubjlQQAP+HudzN7uvvraPY3EbFlyDYZWfa19JEh22R02WcyZJsgIkQqiPRARIjMEbFVCjEitv3hyLJSyi1DFuCfOGe8cv1aflEXnMk2QUSIVBDpgYgQmSNiqxRicMYDHMIZr2S/ll/UBWeyTRARIhVEeiAiROaI2CqFGJzxAEvyBjNP73b4ZeAUAAAAAElFTkSuQmCC"
+        alt="squared-menu"
+        class="img-icon-sidebar"
+        onclick="location.href='./products.html'"
+      />
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6klEQVR4nN1Vv0scURBekUQjSZvawIK66t2973t3HBfkylRW4SrBUtJIIIW9jdgk3OmZ+xNSpEkTG01IHUKaaCFiYdKKhQaCP46T0TlY3r0Nu2d3Aw/ezs6bb/b7Zt4GwcAayVmSDQB7JP/K0n3dWjvTd+IwDEdIvifZJtmRBeA3gM+x52uSzSiKHvaT/Gs3USzhNoAXrp/kl0wgAFqe5Ju5XO6pgANYAnDlvs/CedutMAiCoVKp9AxAWYtYdwCui8XidBqAuoeCVX23BeBA9tbaiucr36UB2PccbGnSlyQvARwB+OOJ+yVx1Wp1NFETAGeeLzjN5/PjCmIAfPfECMCZFjkmrZ0FoAPghOSrWq02LNUB+JYEUKlUnogmxpipVBSp74ccAvBB4owx80kUWWsn1FdPK/LzGPixJikmiQxgQZ/3egBk/HVC44fX9CABzCnYG7dNC4VCpHEf1X+e1ElNB+ACwGvhtlwuPyK5COCfE3MrqjEmlE6La9JjIiLJXQ8FGySXPf4dkg+0+k+uJokgMv4OXYcAfjqXXaObnORK5sGT8ZdAqUY4lSV7AG+7nMeSt32a3MuMMWGcFleTrFf4WBRFj0lOSitqt1z+T5PUFt0J3/C0cCdJk77MGDMlw6iayC/Uq8ng2Q1L+n+HtHC+LgAAAABJRU5ErkJggg=="
+        alt="coins"
+        class="img-icon-sidebar"
+      />
+      <i class="fas fa-chart-line"></i>
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABSUlEQVR4nOWVz0rDQBCHo2f/oL5FJJDMt0ljnkBvhVKP6hP0Zdpercc+Um8FRfABWm+1MpBCSHfXBCMoDsxpZ77fMLOzGwT/wowxN8AK2Ja+SpLkujMB4KkC3/msE3iappfA0iKwjOM4bMs7BCbAXERugSnwYYHvXM+mZexcc5XhpIvIgwe2bej3VngYhkfA63cFROQty7KTPQFg5El6NsYMiqI4Vgf6IrLwCI32BJIkuQLWNnie5+f1+CiKzvTMAl8ry9omoCci79UEY8zANTNgWCtGc3vOIZdJ1YXaaktcsdrrWvUrL7ytAHDaSsDWIqDvii/vf7MWeYa80IHW49M0vRCRl8ZD/uqaAkPtubpW7oC7r+mPL5qarnkHT8Vd4LGD2mM3ATYe2EZExuU+aM5YGUEbi+M47PK5thowswg8Bn/mywx+s30Cvzxzt7PbVtkAAAAASUVORK5CYII="
+        alt="settings"
+        class="img-icon-sidebar"
+      />
+
+      <div class="footer" onclick="location.href='index.html'">
+        <i class="fas fa-sign-out-alt"></i>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <i class="fas fa-bars"></i>
+      <div class="btn-container">
+        <h1>List Data Product</h1>
+        <a class="add-product"><i class="fas fa-plus"></i> Tambah Produk</a>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="productTable"></tbody>
+      </table>
+    </div>
+
+    <!-- EDIT -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('editModal')">&times;</span>
+        <h2 class="modal-text">Edit Produk</h2>
+
+        <label>Nama Produk</label>
+        <input type="text" id="editName" />
+
+        <label>Harga</label>
+        <input type="number" id="editPrice" />
+
+        <label>Stock</label>
+        <input type="number" id="editStock" />
+
+        <div class="modal-buttons">
+          <button class="cancel-btn" onclick="closeModal('editModal')">
+            Batal
+          </button>
+          <button class="save-btn" onclick="saveEdit()">Simpan</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD -->
+    <div id="addModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('addModal')">&times;</span>
+        <h2 class="modal-text">Tambah Produk</h2>
+
+        <label>Nama Produk</label>
+        <input type="text" id="addName" />
+
+        <label>Harga</label>
+        <input type="number" id="addPrice" />
+
+        <label>Stock</label>
+        <input type="number" id="addStock" />
+
+        <div class="modal-buttons">
+          <button class="cancel-btn" onclick="closeModal('addModal')">
+            Batal
+          </button>
+          <button class="save-btn" onclick="saveAdd()">Tambah</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DELETE CONFIRM -->
+    <div id="notifBox" class="notif">
+      <div id="notifIcon" class="notif-icon">!</div>
+      <h3 id="notifTitle">Notifikasi</h3>
+      <p id="notifMessage"></p>
+
+      <div id="notifActions" class="notif-actions" style="display: none">
+        <button class="yes-btn" onclick="confirmDelete()">Iya</button>
+        <button class="no-btn" onclick="closeNotif()">Tidak</button>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
