@@ -58,6 +58,7 @@ TOMBOL & FUNGSI:
 
 - Menampilkan tabel daftar produk (nama, harga, stok).
 - Memiliki fitur CRUD sederhana menggunakan JavaScript:
+  
     Add Product:
     Muncul modal addModal
     Tambah nama, harga, dan stok produk
@@ -71,3 +72,4 @@ TOMBOL & FUNGSI:
 
 - Tabel diisi dari array di script.js (manipulasi DOM).
 - Sidebar navigasi sama seperti dashboard.
+
